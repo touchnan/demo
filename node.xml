@@ -1,0 +1,43 @@
+<dependency>
+	<groupId>javax</groupId>
+	<artifactId>javaee-web-api</artifactId>
+	<version>7.0</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>org.apache.tomcat</groupId>
+	<artifactId>tomcat-servlet-api</artifactId>
+	<version>7.0.30</version>
+	<scope>provided</scope>
+</dependency>
+
+<servlet.version>2.5</servlet.version>
+<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>servlet-api</artifactId>
+	<version>${servlet.version}</version>
+	<scope>provided</scope>
+</dependency>
+
+<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>javax.servlet-api</artifactId>
+	<version>3.1.0</version>
+	<scope>provided</scope>
+</dependency>
+
+<jstl.version>1.2</jstl.version>
+<dependency>
+	<groupId>javax.servlet</groupId>
+	<artifactId>jstl</artifactId>
+	<version>${jstl.version}</version>
+</dependency>
+
+<jsp.version>2.2</jsp.version>
+<dependency>
+	<groupId>javax.servlet.jsp</groupId>
+	<artifactId>jsp-api</artifactId>
+	<version>${jsp.version}</version>
+	<scope>provided</scope>
+</dependency>
