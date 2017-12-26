@@ -1,0 +1,201 @@
+2017-07-26 15:13:45,867 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:1
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:2
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:3
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:4
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:5
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:6
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:7
+2017-07-26 15:13:45,906 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 1
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:8
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:9
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:10
+2017-07-26 15:13:45,906 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 2
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:11
+2017-07-26 15:13:45,906 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 3
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:12
+2017-07-26 15:13:45,906 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 4
+2017-07-26 15:13:45,906 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 5
+2017-07-26 15:13:45,906 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 6
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:13
+2017-07-26 15:13:45,906 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 7
+2017-07-26 15:13:45,906 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 8
+2017-07-26 15:13:45,906 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:14
+2017-07-26 15:13:45,906 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 9
+2017-07-26 15:13:45,906 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 10
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 11
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:15
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 12
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 13
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 14
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:16
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:17
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:18
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 15
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:19
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 16
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:20
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 17
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 18
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:21
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 19
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 20
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:22
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 21
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:23
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 22
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:24
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 23
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:25
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 24
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 25
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:26
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:27
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 26
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:28
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 27
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:29
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 28
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:30
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 29
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:31
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 30
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:32
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 31
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:33
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 32
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:34
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 33
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:35
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 34
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 35
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:36
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 36
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:37
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:38
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 37
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:39
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 38
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:40
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 39
+2017-07-26 15:13:45,922 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:41
+2017-07-26 15:13:45,922 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 40
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 41
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:42
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 42
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:43
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:44
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 43
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:45
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 44
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 45
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:46
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 46
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:47
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 47
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:48
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:49
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 48
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:50
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 49
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:51
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 50
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 51
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:52
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:53
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 52
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:54
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 53
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 54
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:55
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:56
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 55
+2017-07-26 15:13:45,938 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 56
+2017-07-26 15:13:45,938 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:57
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 57
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:58
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:59
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 58
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:60
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 59
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:61
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 60
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:62
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 61
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:63
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 62
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:64
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 63
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:65
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 64
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:66
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 65
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:67
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 66
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:68
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 67
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:69
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 68
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:70
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 69
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:71
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 70
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:72
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 71
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:73
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 72
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:74
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 73
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 74
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:75
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:76
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 75
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:77
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 76
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 77
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:78
+2017-07-26 15:13:45,953 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:79
+2017-07-26 15:13:45,953 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 78
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 79
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:80
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:81
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 80
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:82
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 81
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 82
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:83
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 83
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:84
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 84
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:85
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 85
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:86
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:87
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 86
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:88
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 87
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 88
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:89
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 89
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:90
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 90
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:91
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 91
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:92
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:93
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 92
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:94
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 93
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:95
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:96
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:97
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:98
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 94
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:99
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 95
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 96
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] The time server receive order:QUERY TIME ORDER; the counter is:100
+2017-07-26 15:13:45,969 [nioEventLoopGroup-1-0] flush on channelReadComplete ==============>
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 97
+2017-07-26 15:13:45,969 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 98
+2017-07-26 15:13:45,985 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 99
+2017-07-26 15:13:45,985 [nioEventLoopGroup-0-0] Now is:Wed Jul 26 15:13:45 CST 2017; the counter is : 100

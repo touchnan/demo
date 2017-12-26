@@ -1,0 +1,10 @@
+4.2.0 (February 2017)
+----------------------
+
+- Accessibility
+
+
+3.2.0 (February 2016)
+----------------------
+
+- Improved performance

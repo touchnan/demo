@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.touch.demo</groupId>
+	<artifactId>jcaptcha</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<properties>
+		<version.logging>1.1.2</version.logging>
+		<version.slf4j>1.7.5</version.slf4j>
+		<version.junit>4.11</version.junit>
+		<version.collections>3.1</version.collections>
+		
+		<version.jcaptcha>1.0</version.jcaptcha><!-- 2.0-alpha-1, 1.0, 1.0-RC6 -->
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>sourceforge-releases</id>
+			<name>Sourceforge Releases</name>
+			<url>https://oss.sonatype.org/content/repositories/sourceforge-releases</url>
+		</repository>
+		<repository>
+			<id>atlassian-m2-repository</id>
+			<name>atlassian-m2-repository</name>
+			<url>http://repository.atlassian.com/maven2</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${version.junit}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.octo.captcha</groupId>
+			<!-- <artifactId>jcaptcha-all</artifactId> -->
+			<artifactId>jcaptcha</artifactId>
+			<version>${version.jcaptcha}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.servlet</groupId>
+					<artifactId>servlet-api</artifactId>
+				</exclusion>
+			</exclusions>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>${version.logging}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${version.slf4j}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>${version.collections}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>

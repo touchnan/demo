@@ -1,0 +1,41 @@
+http://www.activiti.org/userguide/index.html
+
+kermit kermit admin
+gonzo gonzo manager
+fozzie fozzie user
+
+org.activiti:activiti-engine:jar:5.17.0
++- org.activiti:activiti-bpmn-converter:jar:5.17.0:compile
+|  \- org.activiti:activiti-bpmn-model:jar:5.17.0:compile
+|     +- com.fasterxml.jackson.core:jackson-core:jar:2.2.3:compile
+|     \- com.fasterxml.jackson.core:jackson-databind:jar:2.2.3:compile
+|        \- com.fasterxml.jackson.core:jackson-annotations:jar:2.2.3:compile
++- org.activiti:activiti-process-validation:jar:5.17.0:compile
++- org.activiti:activiti-image-generator:jar:5.17.0:compile
++- org.apache.commons:commons-email:jar:1.2:compile
+|  +- javax.mail:mail:jar:1.4.1:compile
+|  \- javax.activation:activation:jar:1.1:compile
++- org.apache.commons:commons-lang3:jar:3.3.2:compile
++- org.mybatis:mybatis:jar:3.2.5:compile
++- org.springframework:spring-beans:jar:4.0.6.RELEASE:compile
+|  \- org.springframework:spring-core:jar:4.0.6.RELEASE:compile
++- joda-time:joda-time:jar:2.6:compile
++- org.slf4j:slf4j-api:jar:1.7.6:compile
++- org.slf4j:jcl-over-slf4j:jar:1.7.6:compile
+
+
+
+
+The database names of Activiti all start with ACT_. The second part is a two-character identification of the use case of the table. This use case will also roughly match the service API.
+
+ACT_RE_*: RE stands for repository. Tables with this prefix contain static information such as process definitions and process resources (images, rules, etc.).
+ACT_RU_*: RU stands for runtime. These are the runtime tables that contain the runtime data of process instances, user tasks, variables, jobs, etc. Activiti only stores the runtime data during process instance execution, and removes the records when a process instance ends. This keeps the runtime tables small and fast.
+ACT_ID_*: ID stands for identity. These tables contain identity information, such as users, groups, etc.
+ACT_HI_*: HI stands for history. These are the tables that contain historic data, such as past process instances, variables, tasks, etc.
+ACT_GE_*: general data, which is used in various use cases.
+
+
+
+ProcessEngines.getDefaultProcessEngine() will initialize and build a process engine the first time it is called and afterwards always return the same process engine. Proper creation and closing of all process engines can be done with ProcessEngines.init() and ProcessEngines.destroy().
+
+The ProcessEngines class will scan for all activiti.cfg.xml and activiti-context.xml files. For all activiti.cfg.xml files, the process engine will be built in the typical Activiti way: ProcessEngineConfiguration.createProcessEngineConfigurationFromInputStream(inputStream).buildProcessEngine(). For all activiti-context.xml files, the process engine will be built in the Spring way: First the Spring application context is created and then the process engine is obtained from that application context.

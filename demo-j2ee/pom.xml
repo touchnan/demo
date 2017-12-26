@@ -1,0 +1,555 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cn.touch.frame</groupId>
+	<artifactId>demo-j2ee</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<scope.compile>compile</scope.compile>
+
+		<!-- <version.spring-framework>3.2.11.RELEASE</version.spring-framework> -->
+		<version.spring-framework>4.2.2.RELEASE</version.spring-framework>
+	
+		<!--<version.hibernate>3.6.9.Final</version.hibernate> -->
+		<version.hibernate>4.3.11.Final</version.hibernate>
+		<version.hibernate-search>5.5.0.Final</version.hibernate-search>
+		<version.hibernate-validator>5.2.2.Final</version.hibernate-validator>
+		<version.hibernate-ogm>4.1.0.Beta8</version.hibernate-ogm>
+		
+		<version.mybatis>3.3.0</version.mybatis>
+		<version.mybatis-spring>1.2.3</version.mybatis-spring>
+		<version.mybatis-memcached>1.0.0</version.mybatis-memcached>
+		<version.mybatis-guice>3.6</version.mybatis-guice>
+		<version.mybatis-ehcache>1.0.3</version.mybatis-ehcache>
+		<version.mybatis-oscache>1.0.1</version.mybatis-oscache>
+		<version.mybatis-paginator>1.2.15</version.mybatis-paginator>		
+		
+
+		<version.shiro>1.2.3</version.shiro>
+		<version.lucene>4.10.2</version.lucene>
+		<version.stripes>1.5.8</version.stripes>
+		
+		<version.guice>4.0-beta5</version.guice>
+		<!-- <version.guice>3.0</version.guice> -->
+		
+		<version.jclouds>1.8.1</version.jclouds>
+		<!-- <version.jclouds>2.0.0-SNAPSHOT</version.jclouds> -->
+		
+		<version.hibernate-jpa>1.0.1.Final</version.hibernate-jpa>
+		<version.c3p0>0.9.1.2</version.c3p0>
+		<version.mysql>5.1.31</version.mysql>
+		<version.logback>1.0.13</version.logback>
+		<version.slf4j>1.7.5</version.slf4j>
+		<version.javax-inject>1</version.javax-inject>
+		<version.freemarker>2.3.19</version.freemarker>
+		<version.lang3>3.1</version.lang3>
+		<version.poi>3.8</version.poi>
+		<version.io>2.4</version.io>
+		<!-- <version.bcprov>1.44</version.bcprov> -->
+		<version.bcprov>1.51</version.bcprov>
+		<version.logback>1.0.13</version.logback>
+		<version.jsoup>1.7.1</version.jsoup>
+		
+		
+        <java.version>1.7</java.version>
+        <!-- <jetty.maven.version>9.0.4.v20130625</jetty.maven.version> -->
+        
+        <jetty.maven.version>9.2.3.v20140905</jetty.maven.version>
+        <!-- <tomcat.maven.version>2.0-beta-1</tomcat.maven.version> -->
+        <tomcat.maven.version>2.2</tomcat.maven.version>	
+        
+        <version.jetty>9.2.3.v20140905</version.jetty>	
+	</properties>
+	
+	<build>
+       <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty.maven.version}</version>
+                <configuration>
+                    <webAppConfig>
+                        <contextPath>/${project.build.finalName}</contextPath>
+                    </webAppConfig>
+                    <httpConnector>
+                        <port>9080</port>
+                    </httpConnector>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>${tomcat.maven.version}</version>
+                <configuration>
+                    <port>9080</port>
+                </configuration>
+            </plugin>
+
+        </plugins>	
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${version.hibernate}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${version.hibernate}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<!-- optional -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-osgi</artifactId>
+			<version>${version.hibernate}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
+			<version>${version.hibernate}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${version.hibernate}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-proxool</artifactId>
+			<version>${version.hibernate}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-infinispan</artifactId>
+			<version>${version.hibernate}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${version.hibernate}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-search</artifactId>
+			<version>${version.hibernate-search}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${version.hibernate-validator}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate.ogm</groupId>
+		    <artifactId>hibernate-ogm-mongodb</artifactId>
+		    <version>${version.hibernate-ogm}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate.ogm</groupId>
+		    <artifactId>hibernate-ogm-Infinispan</artifactId>
+		    <version>${version.hibernate-ogm}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate.ogm</groupId>
+		    <artifactId>hibernate-ogm-Ehcache</artifactId>
+		    <version>${version.hibernate-ogm}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate.ogm</groupId>
+		    <artifactId>hibernate-ogm-Neo4j</artifactId>
+		    <version>${version.hibernate-ogm}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-core</artifactId>
+			<version>${version.shiro}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-web</artifactId>
+			<version>${version.shiro}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-aspectj</artifactId>
+			<version>${version.shiro}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-cas</artifactId>
+			<version>${version.shiro}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-ehcache</artifactId>
+			<version>${version.shiro}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+<!-- 		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-features</artifactId>
+			<version>${version.shiro}</version>
+			<scope>${scope.compile}</scope>
+		</dependency> -->
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-guice</artifactId>
+			<version>${version.shiro}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-quartz</artifactId>
+			<version>${version.shiro}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.shiro</groupId>
+			<artifactId>shiro-spring</artifactId>
+			<version>${version.shiro}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+
+
+        <dependency>
+        	<groupId>org.apache.lucene</groupId>
+        	<artifactId>lucene-core</artifactId>
+        	<version>${version.lucene}</version>
+        	<scope>${scope.compile}</scope>
+        </dependency>
+        <dependency>
+        	<groupId>org.apache.lucene</groupId>
+        	<artifactId>lucene-analyzers-common</artifactId>
+        	<version>${version.lucene}</version>
+        	<scope>${scope.compile}</scope>
+        </dependency>
+        <dependency>
+        	<groupId>org.apache.lucene</groupId>
+        	<artifactId>lucene-queryparser</artifactId>
+        	<version>${version.lucene}</version>
+        	<scope>${scope.compile}</scope>
+        </dependency>
+		<dependency>
+			<groupId>org.apache.lucene</groupId>
+			<artifactId>lucene-facet</artifactId>
+			<version>${version.lucene}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>        
+        
+        
+       <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${version.spring-framework}</version>
+<!--             <exclusions>
+                <exclusion>
+                    <groupId>quartz</groupId>
+                    <artifactId>quartz</artifactId>
+                </exclusion>
+            </exclusions> -->
+            <scope>${scope.compile}</scope>
+        </dependency>        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>${version.spring-framework}</version>
+<!--             <exclusions>
+                <exclusion>
+                    <groupId>commons-lang</groupId>
+                    <artifactId>commons-lang</artifactId>
+                </exclusion>
+            </exclusions> -->
+            <scope>${scope.compile}</scope>
+        </dependency>            
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${version.spring-framework}</version>
+            <scope>${scope.compile}</scope>
+        </dependency>
+        
+
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${version.mybatis}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>${version.mybatis-spring}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.mybatis.caches</groupId>
+		    <artifactId>mybatis-memcached</artifactId>
+		    <version>${version.mybatis-memcached}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-guice</artifactId>
+		    <version>${version.mybatis-guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.mybatis.caches</groupId>
+		    <artifactId>mybatis-ehcache</artifactId>
+			<scope>${scope.compile}</scope>
+		    <version>${version.mybatis-ehcache}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.mybatis.caches</groupId>
+		    <artifactId>mybatis-oscache</artifactId>
+			<scope>${scope.compile}</scope>
+		    <version>${version.mybatis-oscache}</version>
+		</dependency>
+
+	    <dependency>
+	        <groupId>com.github.miemiedev</groupId>
+	        <artifactId>mybatis-paginator</artifactId>
+			<scope>${scope.compile}</scope>
+	        <version>${version.mybatis-paginator}</version>
+	    </dependency>		
+<!-- 		<dependency>
+		    <groupId>org.mybatis</groupId>
+		    <artifactId>mybatis-pagination</artifactId>
+		    <version>0.0.3</version>
+		</dependency> -->
+		
+		
+		<!-- Guice -->
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>${version.guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-servlet</artifactId>
+			<version>${version.guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-assistedinject</artifactId>
+			<version>${version.guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-grapher</artifactId>
+			<version>${version.guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-jmx</artifactId>
+			<version>${version.guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-jndi</artifactId>
+			<version>${version.guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>		
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-persist</artifactId>
+			<version>${version.guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-spring</artifactId>
+			<version>${version.guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-struts2</artifactId>
+			<version>${version.guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.inject.extensions</groupId>
+			<artifactId>guice-throwingproviders</artifactId>
+			<version>${version.guice}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+					
+	    <dependency>
+	        <groupId>org.apache.jclouds</groupId>
+	        <artifactId>jclouds-all</artifactId>
+	        <version>${version.jclouds}</version>
+	    </dependency>
+				
+				
+        <dependency>
+			<!-- jsoup HTML parser library @ http://jsoup.org/ -->
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>${version.jsoup}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+						
+		<dependency>
+			<groupId>net.sourceforge.stripes</groupId>
+			<artifactId>stripes</artifactId>
+			<version>${version.stripes}</version>
+			<scope>${scope.compile}</scope>
+		</dependency>
+								
+	   <dependency>
+	       <groupId>org.springframework.boot</groupId>
+	       <artifactId>spring-boot-starter-web</artifactId>
+	       <version>1.1.9.RELEASE</version>
+	   </dependency>
+	   
+		<dependency>
+		  <groupId>org.eclipse.jetty.toolchain</groupId>
+		  <artifactId>jetty-test-helper</artifactId>
+		  <version>2.2</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-server</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-security</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<!-- <dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-spdy</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency> -->
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-deploy</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-util</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-servlet</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-webapp</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>jetty-annotations</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>apache-jsp</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.eclipse.jetty</groupId>
+		  <artifactId>apache-jstl</artifactId>
+		  <version>${version.jetty}</version>
+		</dependency>
+
+
+		<dependency>
+		    <groupId>com.alibaba</groupId>
+		    <artifactId>fastjson</artifactId>
+		    <version>1.2.7</version>
+		</dependency>
+		   
+		<dependency>
+		    <groupId>io.netty</groupId>
+		    
+		    <!-- Use 'netty-all' for 4.0 or above -->
+		    <artifactId>netty-all</artifactId>
+		    <!-- <version>4.0.24.Final</version> -->
+		    <version>5.0.0.Alpha1</version>
+		    
+		    <!-- <artifactId>netty</artifactId>
+		    <version>3.9.5.Final</version> -->
+		    
+		    <scope>compile</scope>
+		  </dependency>
+		   
+		   
+		<!-- 		<dependency>
+		    <groupId>com.github.debop</groupId>
+		    <artifactId>hibernate-redis</artifactId>
+		    <version>1.6.1</version>
+		</dependency> -->
+		   
+		   
+		<!-- 	<dependency>
+			  <groupId>net.daum.clix</groupId>
+			  <artifactId>hibernate-redis</artifactId>
+			  <version>1.0</version>
+			</dependency> -->		   
+		   
+		</dependencies>
+</project>

@@ -1,0 +1,38 @@
+
+Check the full list of changes at http://docs.webix.com/file_manager__whats_new.html
+
+Version 4.3 (April 2017)
+-----------------------------
+
+### Breaking change
+
+Two context menu events are renamed:
+
+- onAfterUploadFile to onAfterUploadDialog
+- onBeforeUploadFile to onBeforeUploadDialog
+
+### Major features
+
+- onAfterFileUpload event added
+
+Version 4.2 (February 2017)
+-----------------------------
+
+### Major features
+
+- Folders uploading
+
+Version 3.2.0 (February 2016)
+------------------------------
+
+### Major features
+
+- Editable data sheet
+- Merging and splitting cells
+- Column and row resizing
+- Block selection and block operations
+- Colors, Fonts, Borders and text styling
+- Undo and Redo functionality
+- Fully client side math implementation
+- Ability to load and save to server side
+- Ability to load and export excel files

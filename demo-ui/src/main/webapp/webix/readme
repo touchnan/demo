@@ -1,0 +1,2 @@
+布局是通过行和列来决定的，行和列之间的border是通过type来设定的
+type的可能值有"line" (default), "head", "space", "wide" and "clean" (borderless)

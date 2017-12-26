@@ -1,0 +1,12 @@
+<books>
+  <book>
+    <title>A Game of Thrones</title>
+    <author><first>George</first><last>Martin</last></author>
+    <price>10.99</price>
+  </book>
+  <book>
+    <title>The Pillars of the Earth</title>
+    <author><first>Ken</first><last>Follett</last></author>
+    <price>7.99</price>
+  </book>
+</books>

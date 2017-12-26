@@ -1,0 +1,75 @@
+    <dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-core</artifactId>
+	    <version>5.2.10.Final</version>
+	</dependency>
+
+	<!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-entitymanager</artifactId>
+	    <version>5.2.10.Final</version>
+	</dependency>
+	
+	<!-- optional -->
+	
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-osgi</artifactId>
+	    <version>5.2.10.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-envers</artifactId>
+	    <version>5.2.10.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-c3p0</artifactId>
+	    <version>5.2.10.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-proxool</artifactId>
+	    <version>5.2.10.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-infinispan</artifactId>
+	    <version>5.2.10.Final</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-ehcache</artifactId>
+	    <version>5.2.10.Final</version>
+	</dependency>
+	
+	
+	<dependency>
+	  <groupId>org.hibernate</groupId>
+	  <artifactId>hibernate-jpamodelgen</artifactId>
+	  <version>5.2.10.Final</version>
+	</dependency>
+	
+	
+	
+	This is all you need to add to your pom.xml to get started:
+
+Maven artifact identifier for Hibernate Search
+<dependency>
+   <groupId>org.hibernate</groupId>
+   <artifactId>hibernate-search-orm</artifactId>
+   <version>5.7.1.Final</version>
+</dependency>
+Optional: to store indexes in Infinispan
+<dependency>
+   <groupId>org.hibernate</groupId>
+   <artifactId>hibernate-search-infinispan</artifactId>
+   <version>5.7.1.Final</version>
+</dependency>
+Optional: to store indexes in Elasticsearch
+<dependency>
+   <groupId>org.hibernate</groupId>
+   <artifactId>hibernate-search-elasticsearch</artifactId>
+   <version>5.7.1.Final</version>
+</dependency>

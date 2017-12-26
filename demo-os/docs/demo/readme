@@ -1,0 +1,7 @@
+此DEMO有语法错误，版本氏，兼容性问题
+
+http://www.hrblive.com/coder/blog/blog_126.html
+
+写一个简单的事例小程序给大家玩玩，程序的功能是，在其他机器上启动KeyOutServer的socket服务端。
+
+在你的机器上启动AppMain，监听当前键盘，并发送到远端执行。碉堡了。（别再自己机器上实验哦，按键之后会停不下来的）

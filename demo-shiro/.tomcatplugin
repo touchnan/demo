@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcatProjectProperties>
+    <rootDir>/src/main/webapp</rootDir>
+    <exportSource>false</exportSource>
+    <reloadable>true</reloadable>
+    <redirectLogger>false</redirectLogger>
+    <updateXml>true</updateXml>
+    <warLocation></warLocation>
+    <extraInfo></extraInfo>
+    <webPath>/shiro</webPath>
+    <webClassPathEntries>
+        <webClassPathEntry>/shiro-core/target/classes</webClassPathEntry>
+        <webClassPathEntry>/shiro-web/target/classes</webClassPathEntry>
+        <webClassPathEntry>/shiro/target/classes</webClassPathEntry>
+        <webClassPathEntry>E:/env/maven-dependencies/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar</webClassPathEntry>
+        <webClassPathEntry>E:/env/maven-dependencies/ch/qos/logback/logback-core/1.1.2/logback-core-1.1.2.jar</webClassPathEntry>
+        <webClassPathEntry>E:/env/maven-dependencies/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.jar</webClassPathEntry>
+        <webClassPathEntry>E:/env/maven-dependencies/commons-logging/commons-logging/1.2/commons-logging-1.2.jar</webClassPathEntry>
+        <webClassPathEntry>E:/env/maven-dependencies/javax/servlet/jsp/jstl/jstl-api/1.2/jstl-api-1.2.jar</webClassPathEntry>
+        <webClassPathEntry>E:/env/maven-dependencies/javax/servlet/jstl/1.1.2/jstl-1.1.2.jar</webClassPathEntry>
+        <webClassPathEntry>E:/env/maven-dependencies/org/glassfish/web/jstl-impl/1.2/jstl-impl-1.2.jar</webClassPathEntry>
+        <webClassPathEntry>E:/env/maven-dependencies/org/slf4j/slf4j-api/1.7.7/slf4j-api-1.7.7.jar</webClassPathEntry>
+    </webClassPathEntries>
+</tomcatProjectProperties>

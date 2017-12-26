@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cn.touch.demo.netty</groupId>
+  <artifactId>demo-netty</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>demo-netty</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <scope.compile>compile</scope.compile>
+    <scope.test>test</scope.test>
+    <scope.provided>provided</scope.provided>
+
+
+    <!-- <version.netty>3.9.5.Final</version.netty> -->
+    <!-- <version.netty>4.0.33.Final</version.netty> -->
+    <version.netty>5.0.0.Alpha2</version.netty>
+
+    <version.logback>1.1.2</version.logback>
+    <version.slf4j>1.7.7</version.slf4j>
+    <version.jboss-logging>3.2.0.Final</version.jboss-logging>
+    <version.jboss-logging-annotations>1.2.0.Final</version.jboss-logging-annotations>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>${scope.test}</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>io.netty</groupId>
+      <!-- Use 'netty-all' for 4.0 or above, 'netty' for below -->
+      <artifactId>netty-all</artifactId>
+      <version>${version.netty}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${version.logback}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${version.slf4j}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jboss.logging</groupId>
+      <artifactId>jboss-logging</artifactId>
+      <version>${version.jboss-logging}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jboss.logging</groupId>
+      <artifactId>jboss-logging-annotations</artifactId>
+      <version>${version.jboss-logging-annotations}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+  </dependencies>
+</project>

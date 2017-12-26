@@ -1,0 +1,55 @@
+Check the full list of changes athttp://docs.webix.com/spreadsheet__whats_new.html
+
+Version 4.3 (April 2017)
+-----------------------------
+
+### Fixes
+
+- Improved serialization logic
+- Stable row and column deletion
+- Stable hotkey performance
+
+Version 4.2 (February 2017)
+---------------------------
+
+### Major Feaures
+
+- ability to define custom math methods
+- cross-sheet math
+- string math methods
+- visual improvement - highlighting row and column's headers on cell selection
+- Shift+Arrow keys navigation for area selection
+
+
+Version 4.0 (September 2016)
+----------------------------
+
+### Major Feaures
+
+- Multiple sheets per widgets
+- Conditional formatting
+- Custom number formats
+- Ribbon like toolbar
+- Named ranges
+- Images and Charts in the spreadsheet
+- Configurable context menu
+- Configurable top level menu
+- Split-columns and split-rows functionality
+- Extended math operations
+- Links in the spreadsheet
+
+
+Version 3.2 (February 2016)
+---------------------------
+
+### Major Feaures
+
+- Editable data sheet
+- Merging and splitting cells
+- Column and row resizing
+- Block selection and block operations
+- Colors, Fonts, Borders and text styling
+- Undo and Redo functionality
+- Fully client side math implementation
+- Ability to load and save to server side
+- Ability to load and export excel files

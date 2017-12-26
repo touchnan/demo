@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>cn.touch.demo.mina</groupId>
+  <artifactId>mina-servermix</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <name>demo-mina-servermix</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <scope.compile>compile</scope.compile>
+    <scope.test>test</scope.test>
+    <scope.provided>provided</scope.provided>
+
+    <version.mina>2.0.7</version.mina>
+    <version.logback>1.1.2</version.logback>
+    <version.slf4j>1.7.7</version.slf4j>
+    <version.c3p0>0.9.1.2</version.c3p0>
+    <version.mysql>5.1.31</version.mysql>
+    <version.dbutils>1.5</version.dbutils>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>${scope.test}</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.mina</groupId>
+      <artifactId>mina-core</artifactId>
+      <version>${version.mina}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>${version.logback}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${version.slf4j}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>c3p0</groupId>
+      <artifactId>c3p0</artifactId>
+      <version>${version.c3p0}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${version.mysql}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-dbutils</groupId>
+      <artifactId>commons-dbutils</artifactId>
+      <version>${version.dbutils}</version>
+      <scope>${scope.compile}</scope>
+    </dependency>
+  </dependencies>
+</project>
