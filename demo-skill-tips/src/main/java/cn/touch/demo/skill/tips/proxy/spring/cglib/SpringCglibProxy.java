@@ -1,5 +1,6 @@
 package cn.touch.demo.skill.tips.proxy.spring.cglib;
 
+import org.springframework.cglib.proxy.Callback;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
@@ -26,15 +27,15 @@ public class SpringCglibProxy {
             @Override
             public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
                 //somethings to do, 方法拦截，可以做些业务逻辑处理
-                System.out.println("方法拦截，调用");
-//                    System.out.println("o = [" + o + "], method = [" + method + "], objects = [" + objects + "], methodProxy = [" + methodProxy + "]");
+                System.out.println("spring-cglib方法拦截，调用org.springframework.cglib.proxy.Callback");
+                System.out.println("o = [" + o.getClass() + "], method = [" + method.getName() + "], objects = [" + objects + "], methodProxy = [" + methodProxy.getClass() + "]");
                 //把方法委派给目标对象，这里是helloService
                 Object result = methodProxy.invoke(target, objects);
                 System.out.println("result = " + result);
                 return result;
             }
         });
-        return enhancer.create();//返回代理,这里是helloService的代理
+        return enhancer.create();//通过字节码技术动态创建子类实例,返回代理,这里是helloService的代理
     }
 
     public static void main(String[] args) {
