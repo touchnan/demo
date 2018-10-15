@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+}
+
+group 'cn.touch.demo'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.netty:netty-all:4.1.30.Final'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
