@@ -11,16 +11,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by chengqiang.han on 2018/10/15.
  */
-public class BioTimeClient {
+public class BioTimeClient extends ServerPort {
     public static void main(String[] args) {
-        int port = 8080;
-        if (args != null && args.length > 0) {
-            try {
-                port = Integer.parseInt(args[0]);
-            } catch (NumberFormatException e) {
-
-            }
-        }
+        int port = getPort(args);
 
 //        Socket socket = null;
 //        BufferedReader in = null;
@@ -31,11 +24,8 @@ public class BioTimeClient {
              PrintWriter out = new PrintWriter(socket.getOutputStream(),true)) {
 
             interactive(in, out);
-            try {
-                TimeUnit.SECONDS.sleep(5);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
+            sleeping(5);
 
             interactive(in,out);
         } catch (UnknownHostException e) {
@@ -44,6 +34,14 @@ public class BioTimeClient {
             e.printStackTrace();
         } finally {
 
+        }
+    }
+
+    private static void sleeping(int seconds) {
+        try {
+            TimeUnit.SECONDS.sleep(seconds);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 

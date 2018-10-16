@@ -13,18 +13,9 @@ import java.util.concurrent.Executors;
 /**
  * Created by chengqiang.han on 2018/10/15.
  */
-public class BioTimeServer {
+public class BioTimeServer extends ServerPort {
     public static void main(String[] args) {
-        int port = 8080;
-        if (args != null && args.length > 0) {
-            try {
-                port = Integer.parseInt(args[0]);
-            } catch (NumberFormatException e) {
-
-            }
-        }
-
-
+        int port = getPort(args);
         try (ServerSocket server = new ServerSocket(port);) {
             ExecutorService pool = Executors.newFixedThreadPool(10);
             System.out.println("The time server is start in port : " + port);
