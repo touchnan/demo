@@ -30,20 +30,14 @@ public class BioTimeClient {
              BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
              PrintWriter out = new PrintWriter(socket.getOutputStream(),true)) {
 
-            out.println("QUERY TIME ORDER");
-            System.out.println("Send order 2 server succeed.");
-            String resp = in.readLine();
-            System.out.println("Now is : " + resp);
-
+            interactive(in, out);
             try {
                 TimeUnit.SECONDS.sleep(5);
-                out.println("QUERY TIME ORDER");
-                System.out.println("Send order 2 server succeed.");
-                resp = in.readLine();
-                System.out.println("Now is : " + resp);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+
+            interactive(in,out);
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -51,5 +45,12 @@ public class BioTimeClient {
         } finally {
 
         }
+    }
+
+    private static void interactive(BufferedReader in, PrintWriter out) throws IOException {
+        out.println("QUERY TIME ORDER");
+        System.out.println("Send order 2 server succeed.");
+        String resp = in.readLine();
+        System.out.println("Now is : " + resp);
     }
 }
