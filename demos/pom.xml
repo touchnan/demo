@@ -84,6 +84,12 @@
 			<version>2.0.0</version>
 			<scope>${scope.compile}</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.jeesite</groupId>
+			<artifactId>jeesite-framework</artifactId>
+			<version>4.0-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>demos</finalName>

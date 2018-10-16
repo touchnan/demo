@@ -10,3 +10,6 @@ target/
 work/
 .settings/
 debug/
+.gradle/
+out/
+classes/
