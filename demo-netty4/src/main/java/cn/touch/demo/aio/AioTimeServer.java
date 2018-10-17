@@ -4,6 +4,7 @@ import cn.touch.demo.bio.ServerPort;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.net.StandardSocketOptions;
 import java.nio.ByteBuffer;
 import java.nio.channels.AsynchronousServerSocketChannel;
 import java.nio.channels.AsynchronousSocketChannel;
@@ -21,7 +22,14 @@ public class AioTimeServer extends ServerPort {
 //        try (AsynchronousServerSocketChannel assc = AsynchronousServerSocketChannel.open()) {
 //          此处不能用try-with-resources语句，因为这是异步进程，执行下去就把AsynchronousServerSocketChannel关闭了，会报错
         try  {
+//            设置线程数为CPU核数
+//            AsynchronousChannelGroup channelGroup = AsynchronousChannelGroup.withFixedThreadPool(Runtime.getRuntime().availableProcessors(), Executors.defaultThreadFactory())
+//            AsynchronousServerSocketChannel assc = AsynchronousServerSocketChannel.open(channelGroup);
+
             AsynchronousServerSocketChannel assc = AsynchronousServerSocketChannel.open();
+            //重用端口
+            assc.setOption(StandardSocketOptions.SO_REUSEADDR, true);
+
             assc.bind(new InetSocketAddress(port));
             System.out.println("The time server is start in port:"+ port);
 
@@ -29,7 +37,7 @@ public class AioTimeServer extends ServerPort {
                 @Override
                 public void completed(AsynchronousSocketChannel result, Object attachment) {
 
-                    /*-
+                    /*-=
                      当我们调用AsychronousServerSocketChannel的accept方法后，
                      如果有新的客户连接接入，系统将回调我们传入的CompletionHandler实例的completed方法，
                      表示新的客户端连接已经接入成功，因为一个AsychronousServerSocketChannel可以接入成千上万个客户端，
@@ -52,6 +60,10 @@ public class AioTimeServer extends ServerPort {
                             String currentTime = "QUERY TIME ORDER".equalsIgnoreCase(body)?new Date(System.currentTimeMillis()).toString():"BAD ORDER";
 
                             interactiveWrite(result, currentTime);
+
+                            //处理完之后
+                            buffer.clear();
+                            result.read(buffer,buffer,this);
                         }
 
                         @Override
