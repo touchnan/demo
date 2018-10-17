@@ -1,4 +1,4 @@
-package cn.touch.demo.nio2;
+package cn.touch.demo.aio;
 
 import cn.touch.demo.bio.ServerPort;
 
@@ -14,7 +14,7 @@ import java.util.concurrent.CountDownLatch;
 /**
  * Created by chengqiang.han on 2018/10/16.
  */
-public class Nio2TimeServer extends ServerPort {
+public class AioTimeServer extends ServerPort {
     public static void main(String[] args) {
         CountDownLatch latch = new CountDownLatch(1);
         int port = getPort(args);
