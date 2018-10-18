@@ -56,7 +56,7 @@ public class AioTimeClient extends ServerPort {
                                     e.printStackTrace();
                                 }
 //                                try {
-//                                    TimeUnit.SECONDS.sleep(3);//等接异常close完成再关闭主线程
+//                                    TimeUnit.SECONDS.sleep(3);//等接通道channel异步close完成再关闭主线程
 //                                } catch (InterruptedException e) {
 //                                    e.printStackTrace();
 //                                }
