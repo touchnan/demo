@@ -1,4 +1,4 @@
-package cn.touch.demo.bio;
+package cn.touch.demo.jdkapi.bio;
 
 import java.io.BufferedReader;
 import java.io.IOException;

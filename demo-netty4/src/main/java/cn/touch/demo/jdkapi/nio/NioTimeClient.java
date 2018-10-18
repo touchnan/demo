@@ -1,6 +1,6 @@
-package cn.touch.demo.nio;
+package cn.touch.demo.jdkapi.nio;
 
-import cn.touch.demo.bio.ServerPort;
+import cn.touch.demo.jdkapi.bio.ServerPort;
 
 import java.io.IOException;
 import java.net.InetAddress;
