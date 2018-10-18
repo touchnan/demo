@@ -53,7 +53,7 @@ public class NettyServer {
         Channel channel = bootstrap.bind(new InetSocketAddress(8888)).sync().channel();
 
         //在EventLoop的支持线程外使用channel,直接放入channel所对应的EventLoop的执行队列
-        //不直接使用channel.writeAndFlush(data),会导致线程的切换。
+        //不要直接使用channel.writeAndFlush(data),会导致线程的切换。
         channel.eventLoop().submit(()->{
             channel.writeAndFlush("");
         });
