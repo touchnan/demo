@@ -32,21 +32,36 @@ public class AioTimeClient extends ServerPort {
                     asc.read(readBuffer, readBuffer, new CompletionHandler<Integer, ByteBuffer>() {
                         @Override
                         public void completed(Integer result, ByteBuffer buffer) {
-                            System.out.println("read~~~~~");
-                            buffer.flip();
-                            byte[] bytes = new byte[buffer.remaining()];
-                            buffer.get(bytes);
-                            try {
-                                String body = new String(bytes, "utf-8");
-                                System.out.println("Now is :" + body);
+                            if (result>0) {
+                                System.out.println("read~~~~~");
+                                buffer.flip();
+                                byte[] bytes = new byte[buffer.remaining()];
+                                buffer.get(bytes);
+                                try {
+                                    String body = new String(bytes, "utf-8");
+                                    System.out.println("Now is :" + body);
 //                                latch.countDown();
-                            } catch (UnsupportedEncodingException e) {
-                                System.err.println("read error~~~~~~~~~~~~");
-                                e.printStackTrace();
-                            }
+                                } catch (UnsupportedEncodingException e) {
+                                    System.err.println("read error~~~~~~~~~~~~");
+                                    e.printStackTrace();
+                                }
 
-                            readBuffer.clear();
-                            asc.read(readBuffer,readBuffer,this);
+                                readBuffer.clear();
+                                asc.read(readBuffer, readBuffer, this);
+                            } else if (result<0) {//流已经关闭，关闭通道
+                                System.out.println("result reslut : "+result);
+                                try {
+                                    asc.close();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+//                                try {
+//                                    TimeUnit.SECONDS.sleep(3);//等接异常close完成再关闭主线程
+//                                } catch (InterruptedException e) {
+//                                    e.printStackTrace();
+//                                }
+                                latch.countDown();
+                            }
                         }
 
                         @Override
@@ -63,6 +78,7 @@ public class AioTimeClient extends ServerPort {
                         asc.write(writeBuffer, writeBuffer, new CompletionHandler<Integer, ByteBuffer>() {
                             @Override
                             public void completed(Integer result, ByteBuffer byteBuffer) {
+                                System.out.println("write result:"+result);
                                 if (byteBuffer.hasRemaining()) {
                                     asc.write(byteBuffer, byteBuffer, this);
                                 } else {
@@ -78,12 +94,13 @@ public class AioTimeClient extends ServerPort {
                                         }
                                         asc.write(writeBuffer, writeBuffer, this);
                                     } else {
+                                        //关闭输入输出流
                                         try {
-                                            TimeUnit.SECONDS.sleep(1);//等接收完成后再关闭
-                                        } catch (InterruptedException e) {
+                                            asc.shutdownOutput();
+                                            asc.shutdownInput();
+                                        } catch (IOException e) {
                                             e.printStackTrace();
                                         }
-                                        latch.countDown();
                                     }
 //                                ByteBuffer readBuffer = ByteBuffer.allocate(1024);
 //                                asc.read(readBuffer, readBuffer, new CompletionHandler<Integer, ByteBuffer>() {
@@ -141,5 +158,6 @@ public class AioTimeClient extends ServerPort {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
 }
