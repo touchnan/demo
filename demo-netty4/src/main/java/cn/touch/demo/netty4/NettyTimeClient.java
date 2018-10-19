@@ -11,7 +11,6 @@ import io.netty.handler.codec.string.StringEncoder;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by chengqiang.han on 2018/10/18.
@@ -33,7 +32,6 @@ public class NettyTimeClient extends ServerPort {
                                         @Override
                                         protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
                                             System.out.println("Now time is : " + msg);
-                                            TimeUnit.SECONDS.sleep(3);
                                             ch.close();//shutdown the client
                                         }
                                     });
