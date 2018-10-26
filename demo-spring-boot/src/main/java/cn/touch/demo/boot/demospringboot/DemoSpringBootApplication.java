@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Primary;
+import org.springframework.data.mongodb.MongoDbFactory;
 import org.springframework.data.neo4j.transaction.Neo4jTransactionManager;
 import org.springframework.data.transaction.ChainedTransactionManager;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -47,8 +48,8 @@ public class DemoSpringBootApplication {
 	/** 配置事务 **/
 	@Bean
 	@Qualifier("neo4jTransactionManager")
-	public Neo4jTransactionManager neo4jTransactionManager(SessionFactory nioSessionFactory) throws Exception {
-		return new Neo4jTransactionManager(nioSessionFactory);
+	public Neo4jTransactionManager neo4jTransactionManager(SessionFactory neo4jSessionFactory) throws Exception {
+		return new Neo4jTransactionManager(neo4jSessionFactory);
 	}
 
 	@Bean
@@ -58,12 +59,18 @@ public class DemoSpringBootApplication {
 	}
 
 	@Bean
+	@Qualifier("mongoTransactionManager")
+	public MongoTransactionManager mongoTransactionManager(MongoDbFactory mongoDbFactory) {
+		return new MongoTransactionManager(mongoDbFactory);
+	}
+
+	@Bean
 	@Primary
-	public ChainedTransactionManager transactionManager(DataSource dataSource, SessionFactory nioSessionFactory) throws Exception {
+	public ChainedTransactionManager transactionManager(DataSource dataSource, SessionFactory neo4jSessionFactory, MongoDbFactory mongoDbFactory) throws Exception {
 		/*-
 			The Spring Data Neo4j Guide Book
 			https://docs.spring.io/spring-data/data-neo4j/docs/3.0.x/reference/htmlsingle/#reference_programming-model_transactions
 		 */
-		return new ChainedTransactionManager(neo4jTransactionManager(nioSessionFactory),jdbcTransactionManager(dataSource));
+		return new ChainedTransactionManager(neo4jTransactionManager(neo4jSessionFactory),jdbcTransactionManager(dataSource), mongoTransactionManager(mongoDbFactory));
 	}
 }
