@@ -23,6 +23,7 @@ import java.util.Arrays;
 //@EnableTransactionManagement
 //@MapperScan("cn.touch.demo.boot.demospringboot.mybatis.mapper")
 //@EnableNeo4jRepositories("com.neo4j.repository")
+//@EnableMongoRepositories("com.mongo.repository")
 public class DemoSpringBootApplication {
 
 	public static void main(String[] args) {
