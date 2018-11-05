@@ -20,7 +20,7 @@ public interface DemoNeo4jRepository extends Neo4jRepository<Neo4jMovie,Long> {
     public List<Neo4jMovie> getMoivesByActor(@Param("name") String userName);
 
     @Query("MATCH (p:Person{name:$personName}) -[r:RATED]-> (m:Movie{title:$movieName}) return r")
-    Neo4jRating getRateRelation(@Param("personName") String personName, @Param("movieName") String movieName);
+    Neo4jRating getRateRelation(@Param("personName") String personName, @Param("movieName") String movieName);//关系无法返回，总为空
 
     @Query("MATCH (n:Movie{title:$title}) RETURN n")
     Neo4jMovie getMovie(@Param("title") String title);

@@ -48,6 +48,7 @@ public class Neo4jService {
             System.out.println(m.getTitle());
         }
 
+        //关系无法返回，总为空
         Neo4jRating r  =  demoNeo4jRepository.getRateRelation("王浩", "The Good doctor");
         System.out.println("getRateRelation");
         System.out.println(r.getRating());
