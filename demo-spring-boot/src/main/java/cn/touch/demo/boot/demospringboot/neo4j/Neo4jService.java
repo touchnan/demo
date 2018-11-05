@@ -1,6 +1,5 @@
 package cn.touch.demo.boot.demospringboot.neo4j;
 
-import org.neo4j.ogm.model.QueryStatistics;
 import org.neo4j.ogm.model.Result;
 import org.neo4j.ogm.session.Session;
 import org.neo4j.ogm.session.SessionFactory;
@@ -96,7 +95,18 @@ public class Neo4jService {
     private SessionFactory sessionFactory;
 
     public void noRepository() {
+
         Session session = sessionFactory.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        Result query = session.query("", null);
+        Iterable<Map<String, Object>> maps = query.queryResults();
+//        QueryStatistics queryStatistics = query.queryStatistics();
+        transaction.commit();
+        transaction.rollback();
+
+
+        session = sessionFactory.openSession();
         Neo4jMovie movie = new Neo4jMovie();
         movie.setTitle("The Good doctor");
         Neo4jPerson p = new Neo4jPerson();
@@ -135,18 +145,5 @@ public class Neo4jService {
         movie.setRatings(ratings);
         session.save(movie);
 
-
-
-        session = sessionFactory.openSession();
-        Transaction transaction = session.beginTransaction();
-
-        Result query = session.query("", null);
-        Iterable<Map<String, Object>> maps = query.queryResults();
-
-        query.queryStatistics();
-        QueryStatistics queryStatistics = query.queryStatistics();
-
-        transaction.commit();
-        transaction.rollback();
     }
 }
