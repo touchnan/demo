@@ -26,4 +26,5 @@ public interface DemoMongoRepository extends MongoRepository<MongoPerson,String>
 //    Page<MongoPerson> findByFirstname(String firstname, Pageable pageable);
 //    @Query(value="{ 'firstname' : ?0 }", fields="{ 'firstname' : 1, 'lastname' : 1}")
 //    List<MongoPerson> findByThePersonsFirstname(String firstname);
+//    Optional<MongoPerson> findByLoginName(String primaryKey);
 }
