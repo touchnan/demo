@@ -13,3 +13,4 @@ debug/
 .gradle/
 out/
 classes/
+.idea/
