@@ -16,7 +16,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<activemq.version>5.14.1</activemq.version>
+		<activemq.version>5.15.9</activemq.version>
 
 		<kafka.version>0.10.0.1</kafka.version>
 	</properties>
