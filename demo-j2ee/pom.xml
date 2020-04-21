@@ -61,7 +61,7 @@
         <!-- <tomcat.maven.version>2.0-beta-1</tomcat.maven.version> -->
         <tomcat.maven.version>2.2</tomcat.maven.version>	
         
-        <version.jetty>9.2.3.v20140905</version.jetty>	
+        <version.jetty>9.4.28.v20200408</version.jetty>	
 	</properties>
 	
 	<build>
