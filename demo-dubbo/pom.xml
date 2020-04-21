@@ -17,7 +17,7 @@
 		<curator.version>1.1.16</curator.version> -->
 		
 		
-		<zookeeper.version>3.4.9</zookeeper.version>
+		<zookeeper.version>3.4.14</zookeeper.version>
 		<zkclient.version>0.1</zkclient.version>
 		<spring.version>4.2.4.RELEASE</spring.version>	
   </properties>
