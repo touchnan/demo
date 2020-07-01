@@ -20,7 +20,7 @@
     <version.logback>1.1.2</version.logback>
     <version.slf4j>1.7.7</version.slf4j>
     <version.c3p0>0.9.1.2</version.c3p0>
-    <version.mysql>5.1.31</version.mysql>
+    <version.mysql>8.0.16</version.mysql>
     <version.dbutils>1.5</version.dbutils>
   </properties>
 
