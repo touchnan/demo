@@ -28,7 +28,7 @@
 		<version.mybatis-paginator>1.2.15</version.mybatis-paginator>		
 		
 
-		<version.shiro>1.2.3</version.shiro>
+		<version.shiro>1.7.1</version.shiro>
 		<version.lucene>4.10.2</version.lucene>
 		<version.stripes>1.5.8</version.stripes>
 		
