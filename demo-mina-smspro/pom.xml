@@ -18,7 +18,7 @@
 
     <version.mina>2.0.7</version.mina>
     <version.fastjson>1.2.1</version.fastjson>
-    <version.logback>1.1.2</version.logback>
+    <version.logback>1.2.0</version.logback>
     <version.slf4j>1.7.7</version.slf4j>
     <version.c3p0>0.9.1.2</version.c3p0>
     <version.mysql>5.1.31</version.mysql>
