@@ -22,7 +22,7 @@
     <version.netty>5.0.0.Alpha2</version.netty>
    <!--  <version.netty>4.1.28.Final</version.netty> -->
 
-    <version.logback>1.1.2</version.logback>
+    <version.logback>1.2.0</version.logback>
     <version.slf4j>1.7.7</version.slf4j>
     <version.jboss-logging>3.2.0.Final</version.jboss-logging>
     <version.jboss-logging-annotations>1.2.0.Final</version.jboss-logging-annotations>
