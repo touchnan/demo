@@ -1,0 +1,11 @@
+# Go source files always have LF line endings
+# *.go text eol=lf
+
+# SVG files should not be modified
+*.svg -text
+
+# xml files should not be modified
+*.xml -text
+
+# txt files should not be modified
+*.txt -text
