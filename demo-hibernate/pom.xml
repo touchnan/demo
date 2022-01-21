@@ -19,7 +19,7 @@
     <!-- <version.hibernate>4.3.11.Final</version.hibernate> -->
     <version.hibernate>5.2.10.Final</version.hibernate>
     
-    <version.h2>1.4.182</version.h2>
+    <version.h2>2.1.210</version.h2>
     <version.hsqldb>2.3.2</version.hsqldb>
     <version.mysql>5.1.31</version.mysql>
   </properties>
