@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by <a href="mailto:88052350@qq.com">chengqiang.han</a> on 2022/3/20.
+ * 构造EventHandler-消费者
  */
 @Slf4j
 public class HelloEventHandler implements EventHandler<MessageModel> {

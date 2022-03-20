@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * Created by <a href="mailto:88052350@qq.com">chengqiang.han</a> on 2022/3/20.
+ * 构造Mqservice和实现类-生产者
  */
 @Slf4j
 @Component

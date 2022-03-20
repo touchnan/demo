@@ -5,7 +5,7 @@ import com.lmax.disruptor.EventFactory;
 
 /**
  * Created by <a href="mailto:88052350@qq.com">chengqiang.han</a> on 2022/3/20.
- *
+ * 构造EventFactory
  */
 public class HelloEventFactory implements EventFactory<MessageModel> {
     @Override
