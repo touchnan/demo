@@ -41,4 +41,5 @@ public class MQManager {
         RingBuffer<MessageModel> ringBuffer = disruptor.getRingBuffer();
 
         return ringBuffer;
+    }
 }

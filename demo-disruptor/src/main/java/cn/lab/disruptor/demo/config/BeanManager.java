@@ -14,7 +14,9 @@ public class BeanManager implements ApplicationContextAware {
         this.applicationContext = applicationContext;
     }
 
-    public static ApplicationContext getApplicationContext() { return applicationContext; }
+    public static ApplicationContext getApplicationContext() {
+        return applicationContext;
+    }
 
     public static Object getBean(String name) {
         return applicationContext.getBean(name);
@@ -23,3 +25,4 @@ public class BeanManager implements ApplicationContextAware {
     public static <T> T getBean(Class<T> clazz) {
         return applicationContext.getBean(clazz);
     }
+}
