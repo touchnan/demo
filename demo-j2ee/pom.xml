@@ -16,7 +16,7 @@
 		<!--<version.hibernate>3.6.9.Final</version.hibernate> -->
 		<version.hibernate>4.3.11.Final</version.hibernate>
 		<version.hibernate-search>5.5.0.Final</version.hibernate-search>
-		<version.hibernate-validator>5.2.2.Final</version.hibernate-validator>
+		<version.hibernate-validator>6.0.23.Final</version.hibernate-validator>
 		<version.hibernate-ogm>4.1.0.Beta8</version.hibernate-ogm>
 		
 		<version.mybatis>3.3.0</version.mybatis>
