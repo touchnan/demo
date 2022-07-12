@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.nio.charset.StandardCharsets;
+
 /**
  * Created by <a href="mailto:88052350@qq.com">chengqiang.han</a> on 2022/7/11.
  */
@@ -18,9 +20,9 @@ public class RabbitDemoTest {
 
     @RequestMapping("/test")
     public void send(){
-        Message message = new Message();
-        message.setKey("rabbit");
-        message.setValue("Hello");
+        Message message = new Message("Hello,消息".getBytes(StandardCharsets.UTF_8));
+//        message.setKey("rabbit");
+//        message.setValue("Hello");
         System.out.println("消息发送时间：" + Consumer.getCurrentTime());
         rabbitTemplate.convertAndSend(RabbitMQConfig.DELAY_EXCHANGE, "queue.delay", message, new MessagePostProcessor() {
             @Override
