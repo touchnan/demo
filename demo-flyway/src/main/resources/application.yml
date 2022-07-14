@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    group:
+      dev: "dev,dev-db"
+      prod: "prod,prod-db"
+    active: dev
+  flyway:
+    # 是否启用flyway
+    enabled: true
+#    # 编码格式，默认UTF-8
+#    encoding: UTF-8
+#    # 迁移sql脚本文件存放路径，默认db/migration
+#    locations: classpath:db/migration
+#    # 迁移sql脚本文件名称的前缀，默认V
+#    sql-migration-prefix: V
+#    # 迁移sql脚本文件名称的分隔符，默认2个下划线__
+#    sql-migration-separator: __
+#    # 迁移sql脚本文件名称的后缀
+#    sql-migration-suffixes: .sql
+#    # 迁移时是否进行校验，默认true
+#    validate-on-migrate: true
+#    # 当迁移发现数据库非空且存在没有元数据的表时，自动执行基准迁移，新建schema_version表
+#    #是否开启基线迁移 当数据库已有数据或表时，设置为true才可以执行，以已存在的数据作为一个基础版本，基础版本的版本号通过baseline-version设置
+    baseline-on-migrate: true
+#    #指定基线对应的版本号，默认是1
+#    baseline-version: 0
