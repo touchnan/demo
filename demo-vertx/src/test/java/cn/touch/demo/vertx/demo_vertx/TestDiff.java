@@ -7,11 +7,13 @@ import com.github.difflib.patch.Patch;
 import com.github.difflib.patch.PatchFailedException;
 import com.github.difflib.text.DiffRow;
 import com.github.difflib.text.DiffRowGenerator;
+import name.fraser.neil.plaintext.diff_match_patch;
 
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -27,11 +29,28 @@ public class TestDiff {
     public static String m_file = path + "test3.txt";
 
     public static void main(String[] args) throws Exception{
+
+
 //        System.out.println(new File(s_file).getAbsoluteFile());
-        diff();
+//        diff();
 //        udiff();
 //        patch();
 //        compare();
+
+        google_diff();
+    }
+
+    public static void google_diff() throws IOException {
+        //https://github.com/google/diff-match-patch/tree/master/java
+
+        diff_match_patch patch = new diff_match_patch();
+//        LinkedList<diff_match_patch.Diff> diffs = patch.diff_main(Files.readString(new File(s_file).toPath()), Files.readString(new File(d_file).toPath()), true);
+//        patch.diff_prettyHtml(diffs);
+//        patch.diff_cleanupMerge(diffs);
+//        System.out.println(patch.diff_prettyHtml(diffs));
+
+        LinkedList<diff_match_patch.Diff> diffs = patch.diff_main("wo men dou you aa jia", "wo men dou you yi ge jia", false);
+        System.out.println(patch.diff_prettyHtml(diffs));
     }
 
     public static void diff() throws IOException {
