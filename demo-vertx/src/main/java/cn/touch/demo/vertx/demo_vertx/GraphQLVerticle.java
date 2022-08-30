@@ -19,6 +19,8 @@ import io.vertx.ext.web.handler.graphql.GraphQLHandlerOptions;
 import io.vertx.ext.web.handler.graphql.GraphiQLHandler;
 import io.vertx.ext.web.handler.graphql.GraphiQLHandlerOptions;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * Created by <a href="mailto:88052350@qq.com">chengqiang.han</a> on 2022/8/30.
  */
@@ -59,20 +61,71 @@ public class GraphQLVerticle extends AbstractVerticle {
 
     private GraphQL setupGraphQLJava() {
 //        return GraphQL.newGraphQL(new GraphQLSchema().getType(""));
-        return null;
+        String schema = "" +
+                "type Query {\n" +
+                "  bookById(id: ID): Book\n" +
+                "}\n" +
+                "\n" +
+                "type Book {\n" +
+                "  id: ID\n" +
+                "  name: String\n" +
+                "  pageCount: Int\n" +
+                "  author: Author\n" +
+                "}\n" +
+                "\n" +
+                "type Author {\n" +
+                "  id: ID\n" +
+                "  firstName: String\n" +
+                "  lastName: String\n" +
+                "}";
+
+        SchemaParser schemaParser = new SchemaParser();
+        TypeDefinitionRegistry typeDefinitionRegistry = schemaParser.parse(schema);
+
+        RuntimeWiring runtimeWiring = RuntimeWiring.newRuntimeWiring()
+                .type("bookById", builder -> builder.dataFetcher("Book", new StaticDataFetcher("world")))
+                .type("bookById", builder -> builder.dataFetcher("Author", new StaticDataFetcher("world")))
+                .build();
+
+//        DataFetcher<CompletionStage<List<Link>>> dataFetcher = environment -> {
+//
+//            CompletableFuture<List<Link>> completableFuture = new CompletableFuture<>();
+//
+//            retrieveLinksFromBackend(environment, ar -> {
+//                if (ar.succeeded()) {
+//                    completableFuture.complete(ar.result());
+//                } else {
+//                    completableFuture.completeExceptionally(ar.cause());
+//                }
+//            });
+//
+//            return completableFuture;
+//        };
+//
+//        RuntimeWiring runtimeWiring = RuntimeWiring.newRuntimeWiring()
+//                .type("Query", builder -> builder.dataFetcher("allLinks", dataFetcher))
+//                .build();
+
+        SchemaGenerator schemaGenerator = new SchemaGenerator();
+        GraphQLSchema graphQLSchema = schemaGenerator.makeExecutableSchema(typeDefinitionRegistry, runtimeWiring);
+
+        GraphQL build = GraphQL.newGraphQL(graphQLSchema).build();
+        return build;
     }
 
     public static void main(String[] args) {
 //        io.vertx.core.Launcher.main(new String[]{"run", GraphQLVerticle.class.getName()});
 
-        runGraphQlExample();
+//        runGraphQlExample();
+
+        GraphQL graphQL = new GraphQLVerticle().setupGraphQLJava();
+        ExecutionResult executionResult = graphQL.execute("{bookById{Book{name,author{firstName}}}");
+        System.out.println(executionResult.getData().toString());
     }
 
     private static void runGraphQlExample() {
 //        String schema = "type Query{hello: String} schema{query: Query}";
-
-
-        String schema = "type Query{hello: String} schema{query: Query}";
+        String schema = "type Query{hello: String}";
         SchemaParser schemaParser = new SchemaParser();
         TypeDefinitionRegistry typeDefinitionRegistry = schemaParser.parse(schema);
 
