@@ -19,7 +19,7 @@
 		
 		<zookeeper.version>3.4.9</zookeeper.version>
 		<zkclient.version>0.1</zkclient.version>
-		<spring.version>4.2.4.RELEASE</spring.version>	
+		<spring.version>4.2.7.RELEASE</spring.version>	
   </properties>
   
   <build>
