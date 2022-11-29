@@ -1,0 +1,13 @@
+server:
+  port: 80
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: women
+          uri: http://192.168.31.155
+          predicates:
+           - Path=/**
+#          filters:
+#            -
+

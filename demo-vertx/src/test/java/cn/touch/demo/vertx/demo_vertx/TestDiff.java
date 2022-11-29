@@ -50,6 +50,8 @@ public class TestDiff {
 //        System.out.println(patch.diff_prettyHtml(diffs));
 
         LinkedList<diff_match_patch.Diff> diffs = patch.diff_main("wo men dou you aa jia", "wo men dou you yi ge jia", false);
+
+
         System.out.println(patch.diff_prettyHtml(diffs));
     }
 

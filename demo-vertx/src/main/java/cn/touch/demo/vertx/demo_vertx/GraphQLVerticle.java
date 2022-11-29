@@ -116,11 +116,11 @@ public class GraphQLVerticle extends AbstractVerticle {
     public static void main(String[] args) {
 //        io.vertx.core.Launcher.main(new String[]{"run", GraphQLVerticle.class.getName()});
 
-//        runGraphQlExample();
+        runGraphQlExample();
 
-        GraphQL graphQL = new GraphQLVerticle().setupGraphQLJava();
-        ExecutionResult executionResult = graphQL.execute("{bookById{Book{name,author{firstName}}}");
-        System.out.println(executionResult.getData().toString());
+//        GraphQL graphQL = new GraphQLVerticle().setupGraphQLJava();
+//        ExecutionResult executionResult = graphQL.execute("{bookById{Book{name,author{firstName}}}");
+//        System.out.println(executionResult.getData().toString());
     }
 
     private static void runGraphQlExample() {
@@ -138,6 +138,8 @@ public class GraphQLVerticle extends AbstractVerticle {
 
         GraphQL build = GraphQL.newGraphQL(graphQLSchema).build();
         ExecutionResult executionResult = build.execute("{hello}");
+
+        Object data = executionResult.getData();
 
         System.out.println(executionResult.getData().toString());
 
