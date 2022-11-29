@@ -14,7 +14,7 @@
 
     <version.shiro>1.2.3</version.shiro>
     <version.slf4j>1.7.7</version.slf4j>
-    <version.logback>1.1.2</version.logback>
+    <version.logback>1.2.0</version.logback>
     <version.logging>1.2</version.logging>
 
     <scope.compile>compile</scope.compile>
