@@ -23,7 +23,7 @@
     <version.c3p0>0.9.1.2</version.c3p0>
     <version.mysql>5.1.31</version.mysql>
     <version.dbutils>1.5</version.dbutils>
-    <version.io>2.4</version.io>
+    <version.io>2.7</version.io>
     <version.compress>1.5</version.compress>
     <version.codec>1.7</version.codec>
     <version.lang3>3.1</version.lang3>
