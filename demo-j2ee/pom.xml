@@ -14,7 +14,7 @@
 		<version.spring-framework>4.2.2.RELEASE</version.spring-framework>
 	
 		<!--<version.hibernate>3.6.9.Final</version.hibernate> -->
-		<version.hibernate>4.3.11.Final</version.hibernate>
+		<version.hibernate>5.3.20.Final</version.hibernate>
 		<version.hibernate-search>5.5.0.Final</version.hibernate-search>
 		<version.hibernate-validator>5.2.2.Final</version.hibernate-validator>
 		<version.hibernate-ogm>4.1.0.Beta8</version.hibernate-ogm>
